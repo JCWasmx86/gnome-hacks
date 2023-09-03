@@ -1,0 +1,12 @@
+{% extends 'gnomehacks/base.html' %}
+{% block content %}
+<h1>{{ location.name }}</h1>
+<b>Address:</b> {{ location.address }}<br>
+<b>City:</b> {{ location.city }}<br>
+<b>Country:</b> {{ location.country }}<br>
+
+<p>
+{{ location.description }}
+</p>
+{% endblock content %}
+

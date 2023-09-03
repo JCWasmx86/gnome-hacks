@@ -1,0 +1,18 @@
+{% extends 'gnomehacks/base.html' %}
+{% block content %}
+<div class="card-footer text-end noprint">
+<a href="/locations/create">
+  <i class="mdi mdi-plus-thick" aria-hidden="true">Create location</i>
+</a>
+</div>
+{% if locations %}
+    <ul class="list-group">
+    {% for location in locations %}
+        <li class="list-group-item"><a href="/locations/{{ location.id }}/" class="list-group-item list-group-item-action">{{ location }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No locations are available.</p>
+{% endif %}
+{% endblock content %}
+

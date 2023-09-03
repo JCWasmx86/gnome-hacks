@@ -1,0 +1,17 @@
+{% extends 'gnomehacks/base.html' %}
+{% block content %}
+<h1> {{ hackfest.title }}</h1>
+<b>Location:</b> <a href="/locations/{{ hackfest.location.id }}/">{{ hackfest.location.name }}</a><br>
+<b>When:</b> {{ hackfest.start }} - {{ hackfest.end }}<br>
+<b>Organizer:</b> {{ hackfest.organizer }}<br>
+<p>
+{{ hackfest.description }}
+</p>
+
+<ul class="list-group">
+    {% for attendee in attendees %}
+        <li class="list-group-item">{{ attendee }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock content %}
+
